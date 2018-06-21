@@ -16,15 +16,94 @@
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">Miwok</string>
 
-    <!-- Category name for phrases [CHAR LIMIT=20] -->
-    <string name="category_phrases">Phrases</string>
-
-    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
-    <string name="category_colors">Colors</string>
 
     <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
     <string name="category_numbers">Numbers</string>
+    <string name="numbers_english1">one</string>
+    <string name="numbers_miwok1">lutti</string>
+    <string name="numbers_english2">two</string>
+    <string name="numbers_miwok2">otiiko</string>
+    <string name="numbers_english3">three</string>
+    <string name="numbers_miwok3">tolookosu</string>
+    <string name="numbers_english4">four</string>
+    <string name="numbers_miwok4">oyyisa</string>
+    <string name="numbers_english5">five</string>
+    <string name="numbers_miwok5">massokka</string>
+    <string name="numbers_english6">six</string>
+    <string name="numbers_miwok6">temmokka</string>
+    <string name="numbers_english7">seven</string>
+    <string name="numbers_miwok7">kenekaku</string>
+    <string name="numbers_english8">eight</string>
+    <string name="numbers_miwok8">kawinta</string>
+    <string name="numbers_english9">nine</string>
+    <string name="numbers_miwok9">wo’e</string>
+    <string name="numbers_english10">ten</string>
+    <string name="numbers_miwok10">na’aacha</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">Colors</string>
+    <string name="colors_english1">red</string>
+    <string name="colors_miwok1">weṭeṭṭi</string>
+    <string name="colors_english2">green</string>
+    <string name="colors_miwok2">chokokki</string>
+    <string name="colors_english3">brown</string>
+    <string name="colors_miwok3">ṭakaakki</string>
+    <string name="colors_english4">gray</string>
+    <string name="colors_miwok4">ṭopoppi</string>
+    <string name="colors_english5">black</string>
+    <string name="colors_miwok5">kululli</string>
+    <string name="colors_english6">white</string>
+    <string name="colors_miwok6">kelelli</string>
+    <string name="colors_english7">dusty yellow</string>
+    <string name="colors_miwok7">ṭopiisә</string>
+    <string name="colors_english8">mustard yellow</string>
+    <string name="colors_miwok8">chiwiiṭә</string>
 
     <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
     <string name="category_family">Family Members</string>
+    <string name="family_english1">father</string>
+    <string name="family_miwok1">әpә</string>
+    <string name="family_english2">mother</string>
+    <string name="family_miwok2">әṭa</string>
+    <string name="family_english3">son</string>
+    <string name="family_miwok3">angsi</string>
+    <string name="family_english4">daughter</string>
+    <string name="family_miwok4">tune</string>
+    <string name="family_english5">older brother</string>
+    <string name="family_miwok5">taachi</string>
+    <string name="family_english6">younger brother</string>
+    <string name="family_miwok6">chalitti</string>
+    <string name="family_english7">older sister</string>
+    <string name="family_miwok7">teṭe</string>
+    <string name="family_english8">younger sister</string>
+    <string name="family_miwok8">kolliti</string>
+    <string name="family_english9">grandmother</string>
+    <string name="family_miwok9">ama</string>
+    <string name="family_english10">grandfather</string>
+    <string name="family_miwok10">paapa</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_phrases">Phrases</string>
+    <string name="phrases_english1">Where are you going?</string>
+    <string name="phrases_miwok1">minto wuksus</string>
+    <string name="phrases_english2">What is your name?</string>
+    <string name="phrases_miwok2">tinnә oyaase\'nә</string>
+    <string name="phrases_english3">My name is...</string>
+    <string name="phrases_miwok3">oyaaset...</string>
+    <string name="phrases_english4">How are you feeling?</string>
+    <string name="phrases_miwok4">michәksәs?</string>
+    <string name="phrases_english5">I’m feeling good.</string>
+    <string name="phrases_miwok5">kuchi achit</string>
+    <string name="phrases_english6">Are you coming?</string>
+    <string name="phrases_miwok6">әәnәs\'aa?</string>
+    <string name="phrases_english7">Yes, I’m coming.</string>
+    <string name="phrases_miwok7">hәә’ әәnәm</string>
+    <string name="phrases_english8">I’m coming</string>
+    <string name="phrases_miwok8">әәnәm</string>
+    <string name="phrases_english9">Let’s go.</string>
+    <string name="phrases_miwok9">yoowutis</string>
+    <string name="phrases_english10">Come here.</string>
+    <string name="phrases_miwok10">әnni\'nem</string>
+
+
 </resources>

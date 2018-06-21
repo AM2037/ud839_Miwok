@@ -29,16 +29,16 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("Where are you going?", "minto wuksus"));
-        words.add(new Word("What is your name?","tinnә oyaase'nә"));
-        words.add(new Word("My name is...","oyaaset..."));
-        words.add(new Word("How are you feeling?","michәksәs?"));
-        words.add(new Word("I’m feeling good.","kuchi achit"));
-        words.add(new Word("Are you coming?","әәnәs'aa?"));
-        words.add(new Word("Yes, I’m coming.","hәә’ әәnәm"));
-        words.add(new Word("I’m coming","әәnәm"));
-        words.add(new Word("Let’s go.","yoowutis"));
-        words.add(new Word("Come here.","әnni'nem"));
+        words.add(new Word(getString(R.string.phrases_english1), getString(R.string.phrases_miwok1)));
+        words.add(new Word(getString(R.string.phrases_english2),getString(R.string.phrases_miwok2)));
+        words.add(new Word(getString(R.string.phrases_english3),getString(R.string.phrases_miwok3)));
+        words.add(new Word(getString(R.string.phrases_english4),getString(R.string.phrases_miwok4)));
+        words.add(new Word(getString(R.string.phrases_english5),getString(R.string.phrases_miwok5)));
+        words.add(new Word(getString(R.string.phrases_english6),getString(R.string.phrases_miwok6)));
+        words.add(new Word(getString(R.string.phrases_english7),getString(R.string.phrases_miwok7)));
+        words.add(new Word(getString(R.string.phrases_english8),getString(R.string.phrases_miwok8)));
+        words.add(new Word(getString(R.string.phrases_english9),getString(R.string.phrases_miwok9)));
+        words.add(new Word(getString(R.string.phrases_english10),getString(R.string.phrases_miwok10)));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -47,7 +47,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

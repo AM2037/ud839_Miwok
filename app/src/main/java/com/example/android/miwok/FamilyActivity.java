@@ -29,16 +29,16 @@ public class FamilyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("father","әpә"));
-        words.add(new Word("mother","әṭa"));
-        words.add(new Word("son","angsi"));
-        words.add(new Word("daughter","tune"));
-        words.add(new Word("older brother","taachi"));
-        words.add(new Word("younger brother","chalitti"));
-        words.add(new Word("older sister","teṭe"));
-        words.add(new Word("younger sister","kolliti"));
-        words.add(new Word("grandmother","ama"));
-        words.add(new Word("grandfather","paapa"));
+        words.add(new Word(getString(R.string.family_english1),getString(R.string.family_miwok1), R.drawable.family_father));
+        words.add(new Word(getString(R.string.family_english2),getString(R.string.family_miwok2), R.drawable.family_mother));
+        words.add(new Word(getString(R.string.family_english3),getString(R.string.family_miwok3), R.drawable.family_son));
+        words.add(new Word(getString(R.string.family_english4),getString(R.string.family_miwok4), R.drawable.family_daughter));
+        words.add(new Word(getString(R.string.family_english5),getString(R.string.family_miwok5), R.drawable.family_older_brother));
+        words.add(new Word(getString(R.string.family_english6),getString(R.string.family_miwok6), R.drawable.family_younger_brother));
+        words.add(new Word(getString(R.string.family_english7),getString(R.string.family_miwok7), R.drawable.family_older_sister));
+        words.add(new Word(getString(R.string.family_english8),getString(R.string.family_miwok8), R.drawable.family_younger_sister));
+        words.add(new Word(getString(R.string.family_english9),getString(R.string.family_miwok9), R.drawable.family_grandmother));
+        words.add(new Word(getString(R.string.family_english10),getString(R.string.family_miwok10), R.drawable.family_grandfather));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -47,7 +47,7 @@ public class FamilyActivity extends AppCompatActivity {
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_family);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

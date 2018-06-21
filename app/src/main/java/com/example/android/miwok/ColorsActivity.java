@@ -45,14 +45,14 @@ public class ColorsActivity extends AppCompatActivity {
 
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("red","weṭeṭṭi"));
-        words.add(new Word("green","chokokki"));
-        words.add(new Word("brown","ṭakaakki"));
-        words.add(new Word("gray","ṭopoppi"));
-        words.add(new Word("black","kululli"));
-        words.add(new Word("white","kelelli"));
-        words.add(new Word("dusty yellow","ṭopiisә"));
-        words.add(new Word("mustard yellow","chiwiiṭә"));
+        words.add(new Word(getString(R.string.colors_english1),getString(R.string.colors_miwok1), R.drawable.color_red));
+        words.add(new Word(getString(R.string.colors_english2),getString(R.string.colors_miwok2), R.drawable.color_green));
+        words.add(new Word(getString(R.string.colors_english3),getString(R.string.colors_miwok3), R.drawable.color_brown));
+        words.add(new Word(getString(R.string.colors_english4),getString(R.string.colors_miwok4), R.drawable.color_gray));
+        words.add(new Word(getString(R.string.colors_english5),getString(R.string.colors_miwok5), R.drawable.color_black));
+        words.add(new Word(getString(R.string.colors_english6),getString(R.string.colors_miwok6), R.drawable.color_white));
+        words.add(new Word(getString(R.string.colors_english7),getString(R.string.colors_miwok7), R.drawable.color_dusty_yellow));
+        words.add(new Word(getString(R.string.colors_english8),getString(R.string.colors_miwok8), R.drawable.color_mustard_yellow));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -61,7 +61,7 @@ public class ColorsActivity extends AppCompatActivity {
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_colors);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

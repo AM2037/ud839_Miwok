@@ -15,6 +15,7 @@
  */
 package com.example.android.miwok;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -30,16 +31,16 @@ public class NumbersActivity extends AppCompatActivity {
 
 
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("one","lutti"));
-        words.add(new Word("two","otiiko"));
-        words.add(new Word("three","tolookosu"));
-        words.add(new Word("four","oyyisa"));
-        words.add(new Word("five","massokka"));
-        words.add(new Word("six","temmokka"));
-        words.add(new Word("seven","kenekaku"));
-        words.add(new Word("eight","kawinta"));
-        words.add(new Word("nine","wo’e"));
-        words.add(new Word("ten","na’aacha"));
+        words.add(new Word(getString(R.string.numbers_english1),getString(R.string.numbers_miwok1), R.drawable.number_one));
+        words.add(new Word(getString(R.string.numbers_english2),getString(R.string.numbers_miwok2), R.drawable.number_two));
+        words.add(new Word(getString(R.string.numbers_english3),getString(R.string.numbers_miwok3), R.drawable.number_three));
+        words.add(new Word(getString(R.string.numbers_english4),getString(R.string.numbers_miwok4), R.drawable.number_four));
+        words.add(new Word(getString(R.string.numbers_english5),getString(R.string.numbers_miwok5), R.drawable.number_five));
+        words.add(new Word(getString(R.string.numbers_english6),getString(R.string.numbers_miwok6), R.drawable.number_six));
+        words.add(new Word(getString(R.string.numbers_english7),getString(R.string.numbers_miwok7), R.drawable.number_seven));
+        words.add(new Word(getString(R.string.numbers_english8),getString(R.string.numbers_miwok8), R.drawable.number_eight));
+        words.add(new Word(getString(R.string.numbers_english9),getString(R.string.numbers_miwok9), R.drawable.number_nine));
+        words.add(new Word(getString(R.string.numbers_english10),getString(R.string.numbers_miwok10), R.drawable.number_ten));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -48,7 +49,7 @@ public class NumbersActivity extends AppCompatActivity {
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
 
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
