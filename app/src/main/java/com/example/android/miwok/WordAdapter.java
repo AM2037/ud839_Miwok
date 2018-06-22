@@ -32,7 +32,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      * @param context        The current context. Used to inflate the layout file.
      * @param words A List of Word objects to display in a list
      */
-    WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -47,7 +47,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Check if existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent,false);
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.list_item, parent,false);
         }
 
         // Get the {@link Word} object located at this position on the list
@@ -85,5 +86,8 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Set background color of the text container view
         textContainer.setBackgroundColor(color);
         return listItemView;
+
+        //play audio file
+
     }
 }

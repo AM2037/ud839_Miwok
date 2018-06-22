@@ -15,14 +15,18 @@
  */
 package com.example.android.miwok;
 
-import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
+
+    private MediaPlayer mMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,17 +34,17 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
 
-        ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word(getString(R.string.numbers_english1),getString(R.string.numbers_miwok1), R.drawable.number_one));
-        words.add(new Word(getString(R.string.numbers_english2),getString(R.string.numbers_miwok2), R.drawable.number_two));
-        words.add(new Word(getString(R.string.numbers_english3),getString(R.string.numbers_miwok3), R.drawable.number_three));
-        words.add(new Word(getString(R.string.numbers_english4),getString(R.string.numbers_miwok4), R.drawable.number_four));
-        words.add(new Word(getString(R.string.numbers_english5),getString(R.string.numbers_miwok5), R.drawable.number_five));
-        words.add(new Word(getString(R.string.numbers_english6),getString(R.string.numbers_miwok6), R.drawable.number_six));
-        words.add(new Word(getString(R.string.numbers_english7),getString(R.string.numbers_miwok7), R.drawable.number_seven));
-        words.add(new Word(getString(R.string.numbers_english8),getString(R.string.numbers_miwok8), R.drawable.number_eight));
-        words.add(new Word(getString(R.string.numbers_english9),getString(R.string.numbers_miwok9), R.drawable.number_nine));
-        words.add(new Word(getString(R.string.numbers_english10),getString(R.string.numbers_miwok10), R.drawable.number_ten));
+        final ArrayList<Word> words = new ArrayList<>();
+        words.add(new Word(getString(R.string.numbers_english1),getString(R.string.numbers_miwok1), R.drawable.number_one, R.raw.number_one));
+        words.add(new Word(getString(R.string.numbers_english2),getString(R.string.numbers_miwok2), R.drawable.number_two, R.raw.number_two));
+        words.add(new Word(getString(R.string.numbers_english3),getString(R.string.numbers_miwok3), R.drawable.number_three, R.raw.number_three));
+        words.add(new Word(getString(R.string.numbers_english4),getString(R.string.numbers_miwok4), R.drawable.number_four, R.raw.number_four));
+        words.add(new Word(getString(R.string.numbers_english5),getString(R.string.numbers_miwok5), R.drawable.number_five, R.raw.number_five));
+        words.add(new Word(getString(R.string.numbers_english6),getString(R.string.numbers_miwok6), R.drawable.number_six, R.raw.number_six));
+        words.add(new Word(getString(R.string.numbers_english7),getString(R.string.numbers_miwok7), R.drawable.number_seven, R.raw.number_seven));
+        words.add(new Word(getString(R.string.numbers_english8),getString(R.string.numbers_miwok8), R.drawable.number_eight, R.raw.number_eight));
+        words.add(new Word(getString(R.string.numbers_english9),getString(R.string.numbers_miwok9), R.drawable.number_nine, R.raw.number_nine));
+        words.add(new Word(getString(R.string.numbers_english10),getString(R.string.numbers_miwok10), R.drawable.number_ten, R.raw.number_ten));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -62,5 +66,19 @@ public class NumbersActivity extends AppCompatActivity {
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         assert listView != null;
         listView.setAdapter(adapter);
+
+        //set a click listener to play the audio when the list item is clicked on
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Word word = words.get(position);
+
+                //Create and set up the {@link MediaPlayer} for the audio resource associated with the current word
+                mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getAudioResourceId());
+
+                //Start audio file
+                mMediaPlayer.start();
+            }
+        });
     }
 }
