@@ -42,6 +42,15 @@ import java.util.ArrayList;
 public class ColorsActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayer;
+
+    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            //now that the sound file has finished playing, release the resources
+            releaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,15 +91,35 @@ public class ColorsActivity extends AppCompatActivity {
         //set a click listener to play the audio when the list item is clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                //Get the {@link Word} object at the given position the user clicked on
                 Word word = words.get(position);
+
+                //Release the media player if it currently exists because we are about to
+                //play a different file
+                releaseMediaPlayer();
+
 
                 //Create and set up the {@link MediaPlayer} for the audio resource associated with the current word
                 mMediaPlayer = MediaPlayer.create(ColorsActivity.this, word.getAudioResourceId());
 
                 //Start audio file
                 mMediaPlayer.start();
+
+                //get notified when complete
+                mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });
+    }
+
+    private void releaseMediaPlayer(){
+        // If it's not null it may be currently playing a sound
+        if (mMediaPlayer != null) {
+            //release it regardless because we no longer need it
+            mMediaPlayer.release();
+
+            //Set back to null to tell MediaPlayer it's not configured to play audio at the moment
+            mMediaPlayer = null;
+        }
     }
 }

@@ -15,14 +15,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 //WordAdapter extends or inherits behavior from the ArrayAdapter class
-//to override click between two curly braces and then click code tab --> override methods
-//or click ctrl+o, then scroll to click getView override method
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
     // Resource ID for the background color for each list of words
     private int mColorResourceId;
-
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
@@ -32,7 +29,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
      * @param context        The current context. Used to inflate the layout file.
      * @param words A List of Word objects to display in a list
      */
-    public WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
+    WordAdapter(Activity context, ArrayList<Word> words, int colorResourceId) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
@@ -86,8 +83,5 @@ public class WordAdapter extends ArrayAdapter<Word> {
         //Set background color of the text container view
         textContainer.setBackgroundColor(color);
         return listItemView;
-
-        //play audio file
-
     }
 }
