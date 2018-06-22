@@ -78,10 +78,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         //Set color theme for list items
         View textContainer = listItemView.findViewById(R.id.text_container);
+
+        //play button icon attached to Views
+        View playicon = listItemView.findViewById(R.id.play);
+
         //Find color that resource ID maps to
         int color = ContextCompat.getColor(getContext(), mColorResourceId);
         //Set background color of the text container view
         textContainer.setBackgroundColor(color);
+        playicon.setBackgroundColor(color);
+
         return listItemView;
     }
 }
