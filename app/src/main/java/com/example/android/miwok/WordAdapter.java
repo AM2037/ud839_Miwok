@@ -16,10 +16,10 @@ import java.util.ArrayList;
 
 //WordAdapter extends or inherits behavior from the ArrayAdapter class
 
-public class WordAdapter extends ArrayAdapter<Word> {
+class WordAdapter extends ArrayAdapter<Word> {
 
     // Resource ID for the background color for each list of words
-    private int mColorResourceId;
+    private final int mColorResourceId;
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).

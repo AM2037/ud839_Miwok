@@ -88,8 +88,8 @@
     <string name="phrases_miwok1">minto wuksus</string>
     <string name="phrases_english2">What is your name?</string>
     <string name="phrases_miwok2">tinnә oyaase\'nә</string>
-    <string name="phrases_english3">My name is...</string>
-    <string name="phrases_miwok3">oyaaset...</string>
+    <string name="phrases_english3">My name is&#8230;</string>
+    <string name="phrases_miwok3">oyaaset&#8230;</string>
     <string name="phrases_english4">How are you feeling?</string>
     <string name="phrases_miwok4">michәksәs?</string>
     <string name="phrases_english5">I’m feeling good.</string>
@@ -104,6 +104,4 @@
     <string name="phrases_miwok9">yoowutis</string>
     <string name="phrases_english10">Come here.</string>
     <string name="phrases_miwok10">әnni\'nem</string>
-
-
 </resources>
